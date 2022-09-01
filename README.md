@@ -9,7 +9,7 @@
 #### [Have a try!](#have-a-try) 
 
 - 熟悉环境和操作流程
-[点击接受任务](https://classroom.github.com/a/dzNQHTLr)
+[点击接受任务](https://classroom.github.com/a/EPndI3P4)
 
 ##### [Chapter 1](#chapter-1) 
 
