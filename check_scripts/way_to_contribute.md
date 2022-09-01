@@ -85,6 +85,6 @@ python exec.py init 00
 
 以上我们具体梳理了自动打分覆写的具体过程和打分所依赖脚本的执行流程，而针对于此项目，我们不需要从零开始，只需要**设计好题目**，**写好文档**，并**新建文件夹**，**写好测试所用脚本**，**在后台完成测例的添加**就可以了。
 
-模板仓库：[h68u/GoPracticeGin-template](https://github.com/h68u/GoPracticeGin-template)
+模板仓库：[fresh-hduhelper/GoPracticeGin-template](https://github.com/fresh-hduhelper/GoPracticeGin-template)
 
-后台权限申请(需要先加入组织 h68u, 或许应该将当前仓库移交沆助？)：请联系 @sslime336
+具体问题,请联系 @sslime336
