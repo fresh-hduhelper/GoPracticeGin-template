@@ -1,49 +1,51 @@
 # GoPracticeGin
 
-### 是什么
+## 是什么
 
 一系列有关 `Gin` 框架的练习题，目的是帮助参与者巩固所学
 
-### 测验汇总
+## 练习
 
-#### [Have a try!](#have-a-try) 
+这里的练习依托 GitHub Classroom
 
-- 熟悉环境和操作流程
-[点击接受任务](https://classroom.github.com/a/EPndI3P4)
+为快速适应环境，让我们现在热热身，[点我]()
 
-##### [Chapter 1](#chapter-1) 
+### 第一章 常见请求参数 : []()
 
-- `on progress...`
-  施工中...
+你将学习使用 `Gin` 来处理一些常见的 Http 请求，包括但不限于 GET, POST, PUT 等
 
-##### [Chapter 2](#chapter-2)
+### 第二章 中间件 : []()
 
-- `on progress...`
-  施工中...
+在这里，你将学习编写自己的中间件来处理特定的请求
 
-##### [Chapter 3](#chapter-3) 
+### 第三章 鉴权 : []()
 
-- `on progress...`
-  施工中...
+你将学习权限控制，限制用户的行为，抵御老王八蛋的攻击(尽管挡不住，你还可以挣扎)
 
-#### Have a try!
+### 第四章 自定义 Server : []()
 
-- [ ] 在 `GoPracticeGin-template` 目录下执行 `python exec.py init 00` 使能 GitHub Classroom 的自动打分功能
-- [ ] 执行本地测试 `python exec.py test 00`
-- [ ] 修改后端的返回的内容(相关内容位于 [quizzes/quiz00](quizzes/quiz00/quiz.go) 中)，达到要求后 commit 提交到远程，使测试通过
+动手配置一个 Gin 的 Server，而不是用 gin.Default()
 
-#### Chapter 1
+### 第五章 配置化 : []()
 
-施工中...
+是时候给你的项目引入适当的配置文件了
 
-#### Chapter 2
+### 第六章 项目分层 : []()
 
-施工中...
+一切的尽头是设计! 设计一个合理优雅的项目结构往往强过丰富的功能(大概)
 
-#### Chapter 3
+### 第七章 数据库简单应用 : []()
 
-施工中...
+数据，数据，数据!
 
-### 其他
+### 第八章 模板(MVC 设计模式) : []()
+
+前后一把梭(bushi)
+
+### 第九章 依赖注入(基于 wire) : []()
+
+偷懒的把戏(x)
+
+## 其他
 
 [如何添加新练习 / 测验](check_scripts/way_to_contribute.md)
