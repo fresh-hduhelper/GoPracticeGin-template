@@ -10,7 +10,7 @@ proc getCurReadmeContent(dirName: string): string =
 
 var exceptDirs = @[".git", "misc"]
 
-proc addExceptDir(dirName: string) {.used.} = # TODO find out the meaning of {.used.} is this suppresses the unused warning?
+proc addExceptDir(dirName: string) {.used.} =
   exceptDirs.add(dirName)
 
 proc genBatchGoModFile() =
