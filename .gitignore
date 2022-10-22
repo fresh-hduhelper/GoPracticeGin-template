@@ -1,8 +1,6 @@
-.vscode
-.idea
-.checkspace
-_checkspace
-*.code-workspace
 *.exe
-tmp/
-__pycache__
+
+*.log
+# check.go
+# chapters.lock
+# nim.cfg

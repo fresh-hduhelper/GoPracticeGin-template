@@ -1,0 +1,22 @@
+check: # 100/100 points
+  - warming-up:
+      points: 5
+      timeout: 2s
+      cases:
+
+  - common-params:
+      
+
+  - middlewire:
+
+  - authority:
+
+  - custom-server:
+
+  - configuration:
+
+  - project-layer:
+
+  - template-mvc:
+
+  - dependency-inject:

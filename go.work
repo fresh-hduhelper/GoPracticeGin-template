@@ -1,1 +1,14 @@
 go 1.19
+
+use (
+	./authority
+	./common-params
+	./configuration
+	./custom-server
+	./database-sql
+	./dependency-inject
+	./middlewire
+	./project-layer
+	./template-mvc
+	./warming-up
+)
