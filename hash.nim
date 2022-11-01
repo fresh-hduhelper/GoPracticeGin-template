@@ -87,7 +87,7 @@ when isMainModule:
   else:
     echo "nothing had been changed"
 """
-if isMainModule:
+when isMainModule:
   when defined(bitpos):
     echo getModifiedChaptersIndexes()
   else:
