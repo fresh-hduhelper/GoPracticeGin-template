@@ -32,7 +32,6 @@ var chapters = []string{
 	"configuration",
 	"custom-server",
 	"database-sql",
-	"dependency-inject",
 	"middlewire",
 	"project-layer",
 	"template-mvc",

@@ -42,9 +42,7 @@
 
 前后一把梭(bushi)
 
-### 第九章 依赖注入(基于 wire) : [dependency-inject](dependency-inject/README.md)
-
-偷懒的把戏(x)
+### TODO
 
 ## 其他
 
