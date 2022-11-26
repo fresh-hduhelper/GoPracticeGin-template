@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"flag"
+	"fmt"
 	"os"
 	"os/exec"
 	"strings"
@@ -19,7 +20,7 @@ func main() {
 	content := formatWorkflowContent(targetPractice)
 	overwriteClassroomYaml(content)
 
-	commitAndPush()
+	commitAndPush("finished")
 }
 
 func checkValid(targetPractice string) {
@@ -28,15 +29,11 @@ func checkValid(targetPractice string) {
 	}
 }
 
-func commitAndPush() {
-	cmds := []*exec.Cmd{
-		exec.Command("git", "add", ".github/workflows/classroom.yml"),
-		exec.Command("git", "commit", "-m", "Update autograding"),
-		exec.Command("git", "push"),
-	}
-	for _, cmd := range cmds {
-		cmd.Run()
-	}
+func commitAndPush(msg string) {
+	exec.Command("git", "add", ".github/workflows/classroom.yml").Run()
+	exec.Command("git", "commit", "-m", "Update autograding").Run()
+	exec.Command("git", "push").Run()
+	fmt.Printf("msg: %v\n", msg)
 }
 
 func getPracticeChosen() (pracName string) {
