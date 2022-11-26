@@ -16,11 +16,11 @@ import "fmt"
 */
 
 func main() {
-	// 这里只需要实现一个判断输入的数是否小于 10 的简单程序即可，数据范围: 0~1<<31-1
+	// 这里只需要实现一个判断输入的数是否小于 3 的简单程序即可
 	// 具体的实现已经给出了，您可以修改下面的代码使其错误，然后看看打分的进行，当然也可
 	// 直接提交，您会在自己 repo (仓库)的相应位置看到一片绿的打分结果 :)
 
 	var num int
-	fmt.Scanln("Please input a number(between 0 and 10, edge included): %d", &num)
-	fmt.Println(0 <= num && num <= 10) // 打印的输出将由后台判断时候正确
+	fmt.Scanln(&num)
+	fmt.Println(num < 3) // 打印的输出将由后台判断时候正确
 }

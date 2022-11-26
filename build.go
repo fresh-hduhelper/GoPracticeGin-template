@@ -82,12 +82,15 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Go
         uses: actions/setup-go@v3
         with:
           go-version: 1.19
         
+      - name: Build practice entity
+        run: go build -o main.exe {{.}}
+
       - uses: education/autograding@v1
 `
