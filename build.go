@@ -88,10 +88,14 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    env:
-      CHECK_TARGET: {{.}}
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup check target
+        run: >
+          export CHECK_TARGET={{.}} &&
+          source ~/.bashrc
+        shell: bash
 
       - name: Setup Go
         uses: actions/setup-go@v3
