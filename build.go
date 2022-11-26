@@ -2,15 +2,26 @@ package main
 
 import (
 	"bytes"
-	"flag"
 	"fmt"
 	"os"
 	"os/exec"
-	"strings"
 	"text/template"
+	"time"
 )
 
-var availablePractices = `authority/common-params/configuration/custom-server/database-sql/middlewire/project-layer/template-mvc/warming-up/`
+var nop = struct{}{}
+
+var availablePractices = map[string]struct{}{
+	"authority/":     nop,
+	"common-params/": nop,
+	"configuration/": nop,
+	"custom-server/": nop,
+	"database-sql/":  nop,
+	"middlewire/":    nop,
+	"project-layer/": nop,
+	"template-mvc/":  nop,
+	"warming-up/":    nop,
+}
 
 func main() {
 	targetPractice := getPracticeChosen()
@@ -20,28 +31,27 @@ func main() {
 	content := formatWorkflowContent(targetPractice)
 	overwriteClassroomYaml(content)
 
-	commitAndPush("finished")
+	commitAndPush()
 }
 
 func checkValid(targetPractice string) {
-	if !strings.Contains(availablePractices, targetPractice) {
+	if _, ok := availablePractices[targetPractice]; !ok {
+		fmt.Println("Chapter not found")
 		os.Exit(-1)
 	}
 }
 
-func commitAndPush(msg string) {
-	exec.Command("git", "add", ".github/workflows/classroom.yml").Run()
-	exec.Command("git", "commit", "-m", "Update autograding").Run()
-	exec.Command("git", "push").Run()
-	fmt.Printf("msg: %v\n", msg)
+func commitAndPush() {
+	exec.Command(
+		"git", "add", ".github/workflows/classroom.yml", "&&",
+		"git", "commit", "-m", "Update autograding", "&&",
+		"git", "push",
+	).Run()
+	time.Sleep(3 * time.Second)
 }
 
-func getPracticeChosen() (pracName string) {
-	flag.StringVar(&pracName,
-		"Chosen Practice's Name", "warming-up",
-		"pointing out which practice to check")
-	flag.Parse()
-	return
+func getPracticeChosen() string {
+	return os.Args[1]
 }
 
 func formatWorkflowContent(name string) string {
