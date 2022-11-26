@@ -1,5 +1,7 @@
 # warming-up
 
+[点我跳转接受任务!](https://classroom.github.com/a/MW0JZNd4)
+
 ## 引言
 
 本章为前置章节，主要是为了让您熟悉 GitHub Classroom 的使用
