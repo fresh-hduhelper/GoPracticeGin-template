@@ -28,7 +28,7 @@ go run build.go warming-up/
 go run build.go common-params/
 ```
 
-你将学习使用 `Gin` 来处理一些常见的 Http 请求，包括但不限于 GET, POST, PUT 等
+使用 `Gin` 处理一些常见的 Http 请求
 
 ### 第二章 中间件 : [middlewire](middlewire/README.md)
 
@@ -36,7 +36,7 @@ go run build.go common-params/
 go run build.go middlewire/
 ```
 
-在这里，你将学习编写自己的中间件来处理特定的请求
+编写自己的中间件来处理特定的请求
 
 ### 第三章 鉴权 : [authority](authority/README.md)
 
@@ -44,7 +44,7 @@ go run build.go middlewire/
 go run build.go authority/
 ```
 
-你将学习权限控制，限制用户的行为，抵御老王八蛋的攻击(尽管挡不住，你还可以挣扎)
+了解并使用鉴权，限制用户的行为
 
 ### 第四章 自定义 Server : [custom-server](custom-server/README.md)
 

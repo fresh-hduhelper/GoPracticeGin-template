@@ -88,6 +88,8 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
+    env:
+      CHECK_TARGET: {{.}}
     steps:
       - uses: actions/checkout@v3
 
