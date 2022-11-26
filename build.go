@@ -6,7 +6,6 @@ import (
 	"os"
 	"os/exec"
 	"text/template"
-	"time"
 )
 
 var nop = struct{}{}
@@ -42,12 +41,9 @@ func checkValid(targetPractice string) {
 }
 
 func commitAndPush() {
-	exec.Command(
-		"git", "add", ".github/workflows/classroom.yml", "&&",
-		"git", "commit", "-m", "Update autograding", "&&",
-		"git", "push",
-	).Run()
-	time.Sleep(3 * time.Second)
+	exec.Command("git", "add", ".github/workflows/classroom.yml").Run()
+	exec.Command("git", "commit", "-m", "Update autograding").Run()
+	exec.Command("git", "push").Run()
 }
 
 func getPracticeChosen() string {
@@ -69,6 +65,7 @@ func formatWorkflowContent(name string) string {
 
 func overwriteClassroomYaml(content string) {
 	f, err := os.OpenFile(".github/workflows/classroom.yml", os.O_RDWR, 0644)
+	defer f.Close()
 	if err != nil {
 		os.Exit(-1)
 	}
